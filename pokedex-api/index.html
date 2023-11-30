@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- กำหนด encoding และ viewport -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/pokeball-pokemon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Generation 1-5</title>
+    <!-- เชื่อมโยงไฟล์ stylesheet และ script -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./pokemon.js" defer></script>
+    <script src="./search.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <!-- ส่วนหัวของหน้าหลัก Pokedex -->
+      <header class="header home">
+        <div class="container">
+          <!-- โลโก้และชื่อ Pokedex -->
+          <div class="logo-wrapper">
+            <img src="./assets/pokeball.svg" alt="pokeball" />
+            <h1>Pokédex</h1>
+          </div>
+          <!-- ส่วนค้นหาและเรียงลำดับ -->
+          <div class="search-wrapper">
+            <!-- ส่วนค้นหา -->
+            <div class="search-wrap">
+              <img
+                src="./assets/search.svg"
+                alt="search icon"
+                class="search-icon"
+              />
+              <input
+                type="text"
+                class="search-input body3-fonts"
+                placeholder="Search"
+                id="search-input"
+              />
+              <img
+                src="./assets/cross.svg"
+                alt="cross icon"
+                class="search-close-icon"
+                id="search-close-icon"
+              />
+            </div>
+            <!-- ส่วนเรียงลำดับ -->
+            <div class="sort-wrapper">
+              <div class="sort-wrap">
+                <img
+                  src="./assets/sorting.svg"
+                  alt="sorting"
+                  class="sort-icon"
+                  id="sort-icon"
+                />
+              </div>
+              <!-- ส่วนตัวกรอง -->
+              <div class="filter-wrapper">
+                <p class="body2-fonts">Sort by:</p>
+                <div class="filter-wrap">
+                  <!-- ตัวกรองตามเลข Pokedex -->
+                  <div>
+                    <input
+                      type="radio"
+                      id="number"
+                      name="filters"
+                      value="number"
+                      checked
+                    />
+                    <label for="number" class="body3-fonts">Number</label>
+                  </div>
+                  <!-- ตัวกรองตามชื่อ Pokemon -->
+                  <div>
+                    <input type="radio" id="name" name="filters" value="name" />
+                    <label for="name" class="body3-fonts">Name</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ส่วนแสดงรายการ Pokemon -->
+      <section class="pokemon-list">
+        <div class="container">
+          <div class="list-wrapper"></div>
+        </div>
+        <!-- ข้อความแจ้งเตือนเมื่อ Pokemon ไม่พบ -->
+        <div id="not-found-message">Pokemon not found</div>
+      </section>
+    </main>
+  </body>
+</html>

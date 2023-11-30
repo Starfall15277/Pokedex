@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- กำหนด encoding และ viewport -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/pokeball-pokemon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Detail</title>
+    <!-- เชื่อมโยงไฟล์ stylesheet และ script -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./pokemon-detail.js" defer></script>
+  </head>
+  <body>
+    <main class="detail-main main">
+      <!-- ส่วนหัวของหน้ารายละเอียด -->
+      <header class="header">
+        <div class="header-wrapper">
+          <div class="header-wrap">
+            <!-- ปุ่มย้อนกลับไปที่หน้าหลัก -->
+            <a href="./index.html" class="back-btn-wrap">
+              <img
+                src="./assets/back-to-home.svg"
+                alt="back to home"
+                class="back-btn"
+                id="back-btn"
+              />
+            </a>
+            <!-- ชื่อ Pokemon -->
+            <div class="name-wrap">
+              <h1 class="name"></h1>
+            </div>
+          </div>
+          <!-- แสดงเลข ID ของ Pokemon -->
+          <div class="pokemon-id-wrap">
+            <p class="body2-fonts"></p>
+          </div>
+        </div>
+      </header>
+      <!-- รูปภาพ Pokemon -->
+      <div class="featured-img">
+        <!-- ปุ่มเลื่อนรูปภาพไปทางซ้าย -->
+        <a href="#" class="arrow left-arrow" id="leftArrow">
+          <img src="./assets/chevron_left.svg" alt="back" />
+        </a>
+        <!-- รูปภาพ Pokemon -->
+        <div class="detail-img-wrapper">
+          <img src="" alt="" />
+        </div>
+        <!-- ปุ่มเลื่อนรูปภาพไปทางขวา -->
+        <a href="#" class="arrow right-arrow" id="rightArrow">
+          <img src="./assets/chevron_right.svg" alt="forward" />
+        </a>
+      </div>
+      <!-- ส่วนรายละเอียดของ Pokemon -->
+      <div class="detail-card-detail-wrapper">
+        <!-- ประเภท Pokemon -->
+        <div class="power-wrapper">
+          <p class="body3-fonts type grass"></p>
+          <p class="body3-fonts type poison"></p>
+        </div>
+        <!-- เกี่ยวกับ Pokemon -->
+        <p class="body2-fonts about-text">About</p>
+        <!-- ส่วนข้อมูล Pokemon -->
+        <div class="pokemon-detail-wrapper">
+          <!-- น้ำหนัก Pokemon -->
+          <div class="pokemon-detail-wrap">
+            <div class="pokemon-detail">
+              <img src="./assets/weight.svg" alt="weight" />
+              <p class="body3-fonts weight"></p>
+            </div>
+            <p class="caption-fonts">Weight</p>
+          </div>
+          <!-- ความสูง Pokemon -->
+          <div class="pokemon-detail-wrap">
+            <div class="pokemon-detail">
+              <img src="./assets/height.svg" alt="height" class="straighten" />
+              <p class="body3-fonts height"></p>
+            </div>
+            <p class="caption-fonts">Height</p>
+          </div>
+          <!-- ท่าโจมตี (Move) ของ Pokemon -->
+          <div class="pokemon-detail-wrap">
+            <div class="pokemon-detail move"></div>
+            <p class="caption-fonts">Move</p>
+          </div>
+        </div>
+        <!-- คำอธิบาย Pokemon -->
+        <p class="body3-fonts pokemon-description"></p>
+        <!-- ข้อมูลพื้นฐาน (Base Stats) -->
+        <p class="body2-fonts about-text">Base Stats</p>
+        <!-- แสดงค่า Base Stats -->
+        <div class="stats-wrapper">
+          <!-- HP -->
+          <div class="stats-wrap" data-stat="hp">
+            <p class="body3-fonts stats">HP</p>
+            <p class="body3-fonts"></p>
+            <progress value="" max="100" class="progress-bar"></progress>
+          </div>
+          <!-- Attack -->
+          <div class="stats-wrap" data-stat="ATK">
+            <p class="body3-fonts stats">ATK</p>
+            <p class="body3-fonts"></p>
+            <progress value="" max="100" class="progress-bar"></progress>
+          </div>
+          <!-- Defense -->
+          <div class="stats-wrap" data-stat="DEF">
+            <p class="body3-fonts stats">DEF</p>
+            <p class="body3-fonts"></p>
+            <progress value="" max="100" class="progress-bar"></progress>
+          </div>
+          <!-- Special Attack -->
+          <div class="stats-wrap" data-stat="SATK">
+            <p class="body3-fonts stats">SATK</p>
+            <p class="body3-fonts"></p>
+            <progress value="" max="100" class="progress-bar"></progress>
+          </div>
+        </div>
+      </div>
+      <!-- รูปภาพ Pokedex ที่ใช้เป็นพื้นหลัง -->
+      <img src="./assets/pokedex.svg" alt="pokedex" class="detail-bg" />
+    </main>
+  </body>
+</html>
